@@ -1,0 +1,36 @@
+<body>
+  <div class="container">
+    <div class="wrapper animated bounceInLeft">
+     
+      <div class="side_cover_banner">
+      </div>
+      
+      <div class="register">
+       <div id="register_title">Let's Get Started</div>
+       
+       <p class="nav">
+              <a ><span class="coop inactive_tab" [class.Copactive]="Copactive" (click)="activeCooperator()">Register as Cooperator</span></a>
+              <a><span class="ven inactive_tab" [class.Venactive]="Venactive" (click)="activeVendor()">Register as Vendor</span></a>
+        </p>
+        <form>
+          <p>
+            <input type="text" name="name" class="Business_Name" placeholder="Business Name" autocomplete="new-password">
+          </p>
+          <p>
+            <input type="email" name="password" class="Email_Address" placeholder="Email Address" autocomplete="new-password">
+          </p>
+          <p class="full">
+            <button routerLink="/kyc/phone-verification" style="background-image: -moz-linear-gradient( -135deg, rgb(255,144,0) 0%, rgb(255,23,23) 100%) !important;
+            background-image: -webkit-linear-gradient( -135deg, rgb(255,144,0) 0%, rgb(255,23,23) 100%) !important;
+            background-image: -ms-linear-gradient( -135deg, rgb(255,144,0) 0%, rgb(255,23,23) 100%) !important;">Create Account</button>
+          </p>
+          
+          <p class="footer_links">
+              <a routerLink="/kyc/login"><span class="already_have">Already have an account?</span></a>
+              <a routerLink="/kyc/login"><span class="login_here">Login here</span></a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

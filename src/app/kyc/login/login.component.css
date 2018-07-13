@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    background:#eeeeee;
+    color:#485e74;
+    line-height:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .container{
+    max-width:1920px;
+    max-height: 1800px;
+    margin-left:auto;
+    margin-right:auto;
+    background: #eeeeee;
+    color: #485e74;
+    padding: .5em;
+    font-size: 16px;
+    letter-spacing: 0px !important;
+  }
+  
+  ul{
+    list-style: none;
+    padding:0;
+  }
+  
+  a:link, a:visited {
+      padding: 14px 0px;
+      text-align: center; 
+      text-decoration: none;
+  }
+  
+  a:hover, a:active {
+      color: rgb(255,144,0);
+  }
+  
+  .brand{
+    text-align: center;
+  }
+  
+  .brand span{
+    color:#fff;
+  }
+  
+  .wrapper{
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+  }
+  
+  .login > *{
+    padding: 1em;
+  }
+  
+  .side_cover_banner{
+    background:#c9e6ff;
+  }
+  
+  .login{
+    background:#fff;
+    line-height:1.6;
+    padding: 20px
+  }
+  
+  /* FORM STYLES */
+  .login form{
+    padding-top: 1em;
+  }
+  
+  .login form p{
+    margin:0;
+  }
+  
+  .login form .full{
+    grid-column: 1 / 3;
+  }
+  
+  .login form button, .login form input{
+    width:100%;
+    padding:1.3em;
+    border-width: 1px;
+    border-color: rgb(198, 201, 207) !important;
+    border-style: solid;
+    border-radius: 8px;
+    margin: 15px 15px 15px 0;
+  }
+  
+  .login form button {
+    border-radius: 10px;
+    background-image: -moz-linear-gradient( -135deg, rgb(255,144,0) 0%, rgb(255,23,23) 100%);
+    background-image: -webkit-linear-gradient( -135deg, rgb(255,144,0) 0%, rgb(255,23,23) 100%);
+    background-image: -ms-linear-gradient( -135deg, rgb(255,144,0) 0%, rgb(255,23,23) 100%);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+    border:0;
+    font-size: 15px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  
+  .login form button:hover,.login form button:focus{
+    background:rgb(255,144,0);
+    color:#fff;
+    outline:0;
+    transition: background-color 1s ease-out;
+  }
+  
+  .side_cover_banner {
+      padding: 50px;
+      background-image: url("./../../../assets/image/cache/catalog/kyc/side_cover1-mobile.png");
+      background-size:     cover;                     
+      background-repeat:   no-repeat;
+      background-position: center center;   
+      margin: 0;
+  }
+  
+  #login_title {
+      display: grid;
+      justify-items:center;
+      align-items:center;
+      font-size: 30px;
+      font-family: "Open Sans";
+      color: rgb(44, 44, 44);
+      line-height: 1.2;
+      padding-bottom: 20px;
+  }
+  
+  .Email_Adress {
+    background: url("./../../../assets/image/cache/catalog/kyc/mail_icon.png") no-repeat scroll 10px;
+    padding-left: 45px !important;
+    font-size: 13px;
+    font-family: "Open Sans";
+    color: rgb(170, 170, 170) !important;
+    line-height: 1.2;
+    z-index: 32;
+  }
+  
+  .Password {
+    background: url("./../../../assets/image/cache/catalog/kyc/pass.png") no-repeat scroll 10px;
+    padding-left: 45px !important;
+    font-size: 13px;
+    font-family: "Open Sans";
+    color: rgb(170, 170, 170) !important;
+    line-height: 1.2;
+    z-index: 26;
+  }
+  
+  .footer_links {
+      padding: 30px 5px 0 15px;
+      display: block;
+     
+  }
+  
+  .forgot, .account {
+      display: block;
+      color: rgb(51, 51, 51);
+      text-decoration: none !important;
+  }
+  
+  .myCheckbox input {
+      display: none;
+  }
+  
+  .myCheckbox span {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url("./../../../assets/image/cache/catalog/kyc/check_bg.png") no-repeat scroll;
+  }
+  
+  .myCheckbox input:checked + span {
+      display: inline-block;
+      background: url("./../../../assets/image/cache/catalog/kyc/check_bg_checked.png") no-repeat scroll;
+  }
+  
+  #remember {
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 0 0 5px;
+  }
+  
+  
+  
+  /* LARGE SCREENS */
+  @media(min-width:980px){
+  body{
+    padding: 4em 8em;
+  }
+  
+    .wrapper{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  
+  .login > *{
+      padding:4em;
+    }
+  
+    .side_cover_banner h3, .side_cover_banner ul, .brand{
+      text-align: left;
+    }
+      .side_cover_banner {
+      background-image: url('../../../assets/image/cache/catalog/kyc/side_cover1.png');
+      background-size:     cover;                     
+      background-repeat:   no-repeat;
+      background-position: center center;     
+      }
+
+  }
+  
+  
+  
+  @media(min-width:1573px){
+      .footer_links {
+      padding: 30px 5px 0 0px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+      .account {
+      display: grid;
+      justify-content: right;
+  }
+
+      .forgot {
+        display: grid;
+        justify-content: left;
+      }
+      .login > *{
+      padding:8em;
+    }
+  
+  }
+  
