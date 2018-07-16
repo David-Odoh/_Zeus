@@ -42,6 +42,7 @@ import { Breadcrumb2Component } from './vendor/breadcrumb2/breadcrumb2.component
 import { MakeSaleComponent } from './vendor/make-sale/make-sale.component';
 import { ChangePasswordComponent } from './vendor/change-password/change-password.component';
 import { ReportIssueComponent } from './vendor/report-issue/report-issue.component';
+import { AddressBookComponent } from './vendor/address-book/address-book.component';
 
 
 const appRoutes: Routes = [
@@ -90,6 +91,7 @@ const appRoutes: Routes = [
       { path: 'make-sale', component: MakeSaleComponent },
       { path: 'change-password', component: ChangePasswordComponent },
       { path: 'report-issue', component: ReportIssueComponent },
+      { path: 'address-book', component: AddressBookComponent },
     ]
   },
   { path: '**', redirectTo: '/shop', pathMatch: 'full' }
@@ -133,7 +135,8 @@ const appRoutes: Routes = [
     Breadcrumb2Component,
     MakeSaleComponent,
     ChangePasswordComponent,
-    ReportIssueComponent
+    ReportIssueComponent,
+    AddressBookComponent
   ],
   imports: [
     BrowserModule,
