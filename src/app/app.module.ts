@@ -43,6 +43,7 @@ import { MakeSaleComponent } from './vendor/make-sale/make-sale.component';
 import { ChangePasswordComponent } from './vendor/change-password/change-password.component';
 import { ReportIssueComponent } from './vendor/report-issue/report-issue.component';
 import { AddressBookComponent } from './vendor/address-book/address-book.component';
+import { NewSeatComponent } from './vendor/new-seat/new-seat.component';
 
 
 const appRoutes: Routes = [
@@ -92,6 +93,7 @@ const appRoutes: Routes = [
       { path: 'change-password', component: ChangePasswordComponent },
       { path: 'report-issue', component: ReportIssueComponent },
       { path: 'address-book', component: AddressBookComponent },
+      { path: 'new-seat', component: NewSeatComponent },
     ]
   },
   { path: '**', redirectTo: '/shop', pathMatch: 'full' }
@@ -136,7 +138,8 @@ const appRoutes: Routes = [
     MakeSaleComponent,
     ChangePasswordComponent,
     ReportIssueComponent,
-    AddressBookComponent
+    AddressBookComponent,
+    NewSeatComponent
   ],
   imports: [
     BrowserModule,
