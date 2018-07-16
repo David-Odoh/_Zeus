@@ -12,13 +12,9 @@
     padding: 20px 70px;
 }
 
-.img {
-    display: grid;
-    width: 100%;
-    justify-content: right;
-    align-content: right;
+.inner-wrapper {
+    padding: 50px 70px;
 }
-
 
 .heading3 {
     font-family: 'Open Sans';
@@ -28,7 +24,7 @@
 }
 
 .form-body {
-    padding: 50px 70px;
+    padding-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 70px;
@@ -119,4 +115,40 @@
     border-radius: 5px;
     text-align: center;
     background: url("/assets/image/cache/catalog/vendors/upload.png") no-repeat scroll 50% 20%;
+}
+
+.single-row, .add-new {
+    border-top: 2px solid #ededef;
+    padding: 34px 0;   
+}
+
+.saved-addresses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px
+}
+
+.add-new, #plus {
+    font-size: 18px;
+    color: #ffc680;
+}
+
+#add-new {
+    /* float: right; */
+    display: inline-block;
+}
+
+#plus {
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 50%;
+    height: 22px;
+    width: 22px;
+    vertical-align: middle;
+    border: 1px solid #ffc680;
+    text-align: center;
+    margin-right: 15px;
+}
+.float-right {
+    float: right;
 }
