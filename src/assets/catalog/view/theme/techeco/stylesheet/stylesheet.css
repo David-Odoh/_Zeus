@@ -563,23 +563,43 @@ footer h5 {
 .breadcrumb i {
 	font-size: 16px;
 }
-.breadcrumb > li a::after{
-	content: '|';
-	color: #222;
-	margin: 0 15px;
+.boxed-icon {
+    padding: 0 20px;
 }
-.breadcrumb > li:last-child a::after{
-	content: '';
-	margin: 0;
+
+.boxed-icon-less {
+    padding: 0 5px;
 }
-.breadcrumb > li + li::before {
-    padding: 0;
-    color: transparent;
+
+.breadcrumb {
+    background-color: #fff;
+}
+
+.breadcrumb-pill {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+}
+
+.breadcrumb > li a::after, .breadcrumb > span > li a::after {
     content: '';
+    color: #222;
+    margin: 0;
+    z-index: 5000;
 }
-.pagination {
-	margin: 0;
-	display: flex
+
+.breadcrumb>li, .breadcrumb>span>li {
+    display: inline-block;
+}
+
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "";
+}
+
+.small-text {
+    font-size: 12px;
+    letter-spacing: 0;
 }
 /* buttons */
 .buttons {
@@ -685,6 +705,27 @@ footer h5 {
 	background-color: #222222;
 	background-image: linear-gradient(to bottom, #333333, #111111);
 }
+
+
+.milk_btn {
+    font-size: 15px;
+    font-family: "Open Sans";
+    color: rgb(0, 0, 0);
+    line-height: 0.733;
+    text-align: center;
+    z-index: 361;
+  }
+  .button_base {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 40px;
+    border-color: rgb(255, 189, 103);
+    background-color: rgb(255, 189, 103);
+    width: 100%;
+    height: 55px;
+    z-index: 360;
+  }
+
 /* list group */
 .list-group a {
 	border: 1px solid #DDDDDD;

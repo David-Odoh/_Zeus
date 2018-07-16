@@ -26,17 +26,45 @@ import { VendorBankComponent } from './kyc/vendor-bank/vendor-bank.component';
 import { PhoneVerificationComponent } from './kyc/phone-verification/phone-verification.component';
 import { OtpComponent } from './kyc/otp/otp.component';
 import { DetailsPageComponent } from './shop/details-page/details-page.component';
+import { CooperatorThankYouComponent } from './shop/cooperator-thank-you/cooperator-thank-you.component';
+import { ShoppingCartComponent } from './shop/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './shop/checkout/checkout.component';
+import { ShippingOptionsComponent } from './shop/checkout/shipping-options/shipping-options.component';
+import { CooperativesComponent } from './shop/checkout/cooperatives/cooperatives.component';
+import { TransactionHistoryComponent } from './shop/transaction-history/transaction-history.component';
+import { MyOrdersComponent } from './shop/transaction-history/my-orders/my-orders.component';
+import { TransactionTableComponent } from './shop/transaction-history/transaction-table/transaction-table.component';
+import { OtpModalComponent } from './otp-modal/otp-modal.component';
+import { VendorComponent } from './vendor/vendor.component';
+import { VendorNavbarComponent } from './vendor/vendor-navbar/vendor-navbar.component';
+import { VendorProfileComponent } from './vendor/vendor-profile/vendor-profile.component';
+import { Breadcrumb2Component } from './vendor/breadcrumb2/breadcrumb2.component';
+import { MakeSaleComponent } from './vendor/make-sale/make-sale.component';
+import { ChangePasswordComponent } from './vendor/change-password/change-password.component';
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/shop', pathMatch: 'full'},
+  { path: '', redirectTo: '/shop', pathMatch: 'full' },
   {
     path: 'shop',
     component: ShopComponent,
     children: [
       { path: '', component: HomeComponent },
       { path: 'home', component: HomeComponent },
-      { path: 'product-page', component: DetailsPageComponent }
+      { path: 'product-page', component: DetailsPageComponent },
+      { path: 'cooperator-thank-you', component: CooperatorThankYouComponent },
+      { path: 'shopping-cart', component: ShoppingCartComponent },
+      { path: 'checkout', component: CheckoutComponent },
+      {
+        path: 'history',
+        component: TransactionHistoryComponent,
+        children: [
+          { path: '', component: TransactionTableComponent },
+          { path: 'orders', component: MyOrdersComponent },
+          { path: 'transactions', component: TransactionTableComponent },
+
+        ]
+      }
     ]
   },
   {
@@ -52,7 +80,17 @@ const appRoutes: Routes = [
       { path: 'vendor-bank', component: VendorBankComponent }
     ]
   },
-  { path: '**', redirectTo: '/shop', pathMatch: 'full'}
+  { path: 'otp-modal', component: OtpModalComponent },
+  {
+    path: 'vendor', component: VendorComponent,
+    children: [
+      { path: '', component: VendorProfileComponent },
+      { path: 'profile', component: VendorProfileComponent },
+      { path: 'make-sale', component: MakeSaleComponent },
+      { path: 'change-password', component: ChangePasswordComponent },
+    ]
+  },
+  { path: '**', redirectTo: '/shop', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -77,7 +115,22 @@ const appRoutes: Routes = [
     VendorBankComponent,
     PhoneVerificationComponent,
     OtpComponent,
-    DetailsPageComponent
+    DetailsPageComponent,
+    CooperatorThankYouComponent,
+    ShoppingCartComponent,
+    CheckoutComponent,
+    ShippingOptionsComponent,
+    CooperativesComponent,
+    TransactionHistoryComponent,
+    MyOrdersComponent,
+    TransactionTableComponent,
+    OtpModalComponent,
+    VendorComponent,
+    VendorNavbarComponent,
+    VendorProfileComponent,
+    Breadcrumb2Component,
+    MakeSaleComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+<app-vendor-navbar></app-vendor-navbar>
+<app-breadcrumb2></app-breadcrumb2>
+
+<div id="content" class="container">
+    <div class="th-wrapper">
+
+        <div class="sidebar-right">
+            <div class="sidebar-wrapper">
+                <div class="user">
+                    <div class="user-img"><img src="./../../../assets/image/cache/catalog/vendors/Layer_3.png" alt=""></div>
+                    <div class="id">
+                        <span class="user-name">Ahmed Q.</span>
+                        <span class="point">Points Earned: <strong>2,000</strong></span>
+                    </div>
+                </div>
+                <div class="account-setup">
+                    <div class="acc-set">
+                        <span class="title">Account Setup</span>
+                        <span class="percent">60%</span>
+                    </div>
+                    <div class="progressbar">
+                        <span class="fa fa-stack">
+                <div id="progressbar">
+                  <div></div>
+                </div>
+              </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="setup-list">
+                <div routerLink="/vendor/profile" class="profile in-use">My Profile</div>
+                <div class="address-book">My Address Book</div>
+                <div routerLink="/vendor/make-sale" class="add-cooperative">Seat Management</div>
+                <div routerLink="/vendor/change-password" class="change-password">Change Password</div>
+                <div routerLink="" class="orders">My Orders</div>
+                <div class="logout">Logout</div>
+            </div>
+        </div>
+
+        <div class="dashboard">
+
+            <router-outlet></router-outlet>
+            <!-- <app-vendor-profile></app-vendor-profile> -->
+
+
+        </div>
+    </div>
+</div>

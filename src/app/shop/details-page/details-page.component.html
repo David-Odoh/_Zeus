@@ -1,12 +1,14 @@
 <!-- <div class="col-sm-1 col-lg-1 col-md-1 hidden-xs"></div> -->
 <!-- <div id="content" class="col-sm-10 col-lg-10 col-md-10 col-xs-12 top-padding"> -->
-<div id="content" class="container top-padding">
-  <ul class="breadcrumb hidden-md hidden-sm hidden-xs">
+<div id="content" class="container">
+  <ul class="breadcrumb">
     <li><a href="#">Home</a></li>
     <li><i class="fa fa-angle-right boxed-icon"></i><a href="#" class="breadcrumb-pill">Computers &amp; Tablets</a></li>
-    <li><i class="fa fa-angle-right boxed-icon"></i><a href="#" class="breadcrumb-pill">Laptops</a></li>
-    <li><i class="fa fa-angle-right boxed-icon"></i><a href="#" class="breadcrumb-pill">Apple</a></li>
-    <li><i class="fa fa-angle-right boxed-icon"></i><a href="#" class="breadcrumb-pill">HP Intel Core 1TB HDD 4GB RAM 15"</a></li>
+    <span class="hidden-md hidden-sm hidden-xs">
+      <li><i class="fa fa-angle-right boxed-icon"></i><a href="#" class="breadcrumb-pill">Laptops</a></li>
+      <li><i class="fa fa-angle-right boxed-icon"></i><a href="#" class="breadcrumb-pill">Apple</a></li>
+      <li><i class="fa fa-angle-right boxed-icon"></i><a href="#" class="breadcrumb-pill">HP Intel Core 1TB HDD 4GB RAM 15"</a></li>
+    </span>
   </ul>
   <div class="row">
     <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
@@ -50,16 +52,19 @@
       </ul>
     </div>
     <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 pro-content">
-      <div class="row">
-        <h1><strong>HP Intel Core 1TB HDD 4GB RAM 15"</strong></h1>
-        <span class="small-text">Add to wishlist</span><img class="boxed-icon-less" src="./../../../assets/image/cache/catalog/storefront/wishlist_icon.png">
+      <div class="row left-right-padding">
+        <div class="col-xs-12 col-sm-12">
+          <h1 style="display: inline-block; padding-right:15px;"><strong>HP Intel Core 1TB HDD 4GB RAM 15"</strong></h1>
+          <span class="small-text hidden-md hidden-lg">Add to wishlist</span><img class="boxed-icon-less hidden-md hidden-lg"
+            src="./../../../assets/image/cache/catalog/storefront/wishlist_icon.png">
+        </div>
       </div>
-      <hr class="producthr">
+      <hr class="producthr hidden-md">
 
       <div class="rating">
         <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-4">
-            <img src="./../../../assets/image/cache/catalog/storefront/logo.png" alt="">
+          <div class="col-md-4 col-sm-4 col-xs-4 content-to-left hidden-md">
+            <img src="./../../../assets/image/cache/catalog/storefront/logo.png" alt="" style="max-width: 120px; align-self: left">
           </div>
 
           <div class="col-md-4 col-sm-5 col-xs-5 small-text center-text">
@@ -103,10 +108,10 @@
       <div id="product">
         <div class="row">
           <div class="col-lg-6 col-md-6 hidden-xs hidden-sm forced-left">
-            <p>Availability:<span style="color:#1eb41d">In Stock</span></p>
+            <p class="small-text">Availability:<span style="color:#1eb41d"> In Stock</span></p>
           </div>
           <div class="col-lg-6 col-md-6 hidden-xs hidden-sm forced-right">
-            <p>Sold: <span style="color:#f91643">N20,599</span></p>
+            <p class="small-text">Sold: <span style="color:#f91643">N20,599</span></p>
           </div>
         </div>
         <hr class="producthr">
@@ -131,11 +136,12 @@
                 <input id="input-quantity" type="text" name="quantity" value="2" size="2" id="input-quantity" class="form-control input-number pull-left format_form"
                 />
                 <input type="hidden" name="product_id" value="42" />
-                <button type="button" class="form-control pull-left btn-number btnplus format_form" data-type="plus" data-field="quantity">
+                <button type="button" class="form-control pull-left btn-number btnplus format_form" data-type="plus" data-field="quantity"
+                  style="background-color:#fdbd66">
                         <span class="glyphicon glyphicon-plus"></span>
                     </button>
                 <button type="button" class="form-control pull-left btn-number btnminus format_form" disabled="disabled" data-type="minus"
-                  data-field="quantity">
+                  data-field="quantity" style="background-color:#fdbd66">
                         <span class="glyphicon glyphicon-minus"></span>
                     </button>
               </div>
@@ -165,7 +171,7 @@
                   <option value="">64GHz Dual Core</option>
                 </select>
           </div>
-          <button class="Add_to_Cart button_base">Add to Cart</button>
+          <button class="milk_btn button_base">Add to Cart</button>
         </form>
       </div>
     </div>
@@ -178,6 +184,7 @@
         <li><a href="#tab-review" data-toggle="tab">Reviews (3)</a></li>
       </ul>
       <div class="tab-content">
+        <!-- Accessories -->
         <div class="tab-pane active" id="tab-accessories">
 
           <h3 class="Accesories">Accesories</h3>
@@ -245,7 +252,7 @@
               </div>
             </div>
 
-            <div class="col-lg-2 col-md-4 col-xs-12 col-sm-6 product-layout ">
+            <div class="product-layout col-lg-2 col-md-4 col-xs-12 col-sm-6">
               <div class=" product-layout">
                 <div class=" Products">
                   <div class="image"><a href="#"><img src="./../../../assets/image/cache/catalog/storefront/MLA02_DEFAULT_FV1.png" alt="HTC Touch HD" title="HTC Touch HD" class="img-responsive center-block" /></a>
@@ -293,7 +300,8 @@
               </div>
             </div>
             <div class="col-lg-2 col-md-4 col-xs-12 col-sm-6">
-              <div class="top-padding" style="text-align:center">
+              <hr class="producthr">
+              <div style="text-align:center">
                 <span class="price-old" style="font-size:14px">N219,000</span>
                 <span class="price-new" style="font-size:16px">N150,000</span>
                 <p class="small-text">Bundle price of selected items</p>
@@ -307,66 +315,357 @@
           </div>
         </div>
 
-        <div class="tab-pane" id="tab-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu velit libero. Aenean ut velit at odio dictum
-          vestibulum quis eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam finibus nulla at justo
-          suscipit fringilla. Ut sit amet ipsum id metus facilisis accumsan fringilla et diam. Donec pulvinar dignissim accumsan.
-          Quisque sollicitudin placerat turpis, a hendrerit felis pulvinar sit amet. Vestibulum sagittis blandit nunc. </div>
-        <div class="tab-pane" id="tab-specification">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <td colspan="2"><strong>Processor</strong></td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Clockspeed</td>
-                <td>100mhz</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Description -->
+        <div class="tab-pane" id="tab-description">
+          <div class="spec_icons">
+            <div class="first">
+              <img src="./../../../assets/image/cache/catalog/storefront/intro_turbo_icon_large.png" alt="" class="description_icons_block">
+              <span>Up to 4.4GHZ</span>
+            </div>
+            <div class="second">
+              <img src="./../../../assets/image/cache/catalog/storefront/intro_display_icon_large.png" alt="" class="description_icons_block">
+              <span>Up to 4.4GHZ</span>
+            </div>
+            <div class="third">
+              <img src="./../../../assets/image/cache/catalog/storefront/intro_turbo_icon_large.png" alt="" class="description_icons_block">
+              <span>Up to 4.4GHZ</span>
+            </div>
+          </div>
+
+          <div class="product_ad1 top-padding left-right-padding">
+            <p class="Exceptional_color__Authentic_images_ top-padding">Exceptional Color. Authentic Images</p>
+            <p class="Exceptional_body top-padding left-right-padding"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu velit libero. Aenean ut velit at odio
+              dictum vestibulum quis eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam finibus nulla
+              at justo suscipit fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu velit libero.
+              Aenean ut velit at odio dictum vestibulum quis eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Etiam finibus nulla at justo suscipit fringilla.</p>
+          </div>
+          <div class="display_mac">
+            <div class="product_ad2">
+              <P class="Mac_notebook_displ">The brightest, most colorful mac book ever</P>
+              <p class="The_best_ever">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu velit libero. Aenean ut velit at odio
+                dictum vestibulum quis eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam finibus nulla
+                at justo suscipit fringilla.</p>
+            </div>
+          </div>
+          <div class="product_ad3 left-right-padding">
+            <div class="add3_text">
+              <P class="dynamic_head">The brightest, most colorful mac book ever</P>
+              <p class="dynamic_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu velit libero. Aenean ut velit at odio
+                dictum vestibulum quis eget mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam finibus nulla
+                at justo suscipit fringilla.</p>
+            </div>
+            <div class="Layer_535">
+            </div>
+          </div>
         </div>
+
+        <!-- Specification -->
+        <div class="tab-pane dark-bg" id="tab-specification">
+          <h3 class="Accesories spec_padding">Technical Specs</h3>
+          <hr class="dark-producthr">
+          <div class="tech_spec spec_padding">
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+
+
+          </div>
+
+
+          <h3 class="Accesories spec_padding">Connectivity</h3>
+          <hr class="dark-producthr spec_padding">
+          <div class="connectivity spec_padding">
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+            <div>
+              <h4><strong>The brightest</strong></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit..
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews -->
         <div class="tab-pane" id="tab-review">
-          <form class="form-horizontal" id="form-review">
-            <div id="review"></div>
-            <h2 class="co-heading">Write a review</h2>
-            <div class="form-group required">
-              <div class="col-sm-12">
-                <label class="control-label" for="input-name">Your Name</label>
-                <input type="text" name="name" value="" id="input-name" class="form-control" />
+          <h3 class="Accesories">Reviews</h3>
+          <hr class="producthr">
+          <div class="review">
+            <div class="rate-item">
+              <div class="total-rating">
+                <div class="rtotal">
+                  4.2
+                </div>
+                <div class="rstars">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_big.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_big.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_big.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_big.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_empty_big.png" alt="">
+                </div>
               </div>
-            </div>
-            <div class="form-group required">
-              <div class="col-sm-12">
-                <label class="control-label" for="input-review">Your Review</label>
-                <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
-                <div class="help-block"><span class="text-danger">Note:</span> HTML is not translated!</div>
-              </div>
-            </div>
-            <div class="form-group required">
-              <div class="col-sm-12">
-                <label class="control-label rat">Rating</label> &nbsp;&nbsp;&nbsp; Bad&nbsp;
-                <input type="radio" name="rating" value="1" /> &nbsp;
-                <input type="radio" name="rating" value="2" /> &nbsp;
-                <input type="radio" name="rating" value="3" /> &nbsp;
-                <input type="radio" name="rating" value="4" /> &nbsp;
-                <input type="radio" name="rating" value="5" /> &nbsp;Good
+              <div class="individual-rating">
+                <div class="_5_stars">
+                  <div class="irating">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                  </div>
+                  <div class="num-rating">
+                    1
+                  </div>
+                  <div class="rating-progressbar">
+                    <span class="fa fa-stack">
+                          <div id="progressbar5">
+                            <div></div>
+                          </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="_4_stars">
+                  <div class="irating">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                  </div>
+                  <div class="num-rating">
+                    2
+                  </div>
+                  <div class="rating-progressbar">
+                    <span class="fa fa-stack">
+                          <div id="progressbar4">
+                            <div></div>
+                          </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="_3_stars">
+                  <div class="irating">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                  </div>
+                  <div class="num-rating">
+                    0
+                  </div>
+                  <div class="rating-progressbar">
+                    <span class="fa fa-stack">
+                          <div id="progressbar3">
+                            <div></div>
+                          </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="_2_stars">
+                  <div class="irating">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                  </div>
+                  <div class="num-rating">
+                    0
+                  </div>
+                  <div class="rating-progressbar">
+                    <span class="fa fa-stack">
+                          <div id="progressbar2">
+                            <div></div>
+                          </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="_5_stars">
+                  <div class="irating">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                    <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                  </div>
+                  <div class="num-rating">
+                    4
+                  </div>
+                  <div class="rating-progressbar">
+                    <span class="fa fa-stack">
+                          <div id="progressbar1">
+                            <div></div>
+                          </div>
+                    </span>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            <div class="buttons clearfix">
-              <div class="pull-right">
-                <button type="button" id="button-review" data-loading-text="Loading..." class="btn btn-primary">Continue</button>
+            <div class="write-review">
+              <form class="form-horizontal" id="form-review">
+                <div id="review"></div>
+                <h2 class="co-heading">Write a review</h2>
+                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label" style="display: block; text-align:left">Rating:</label>
+                    <div class="rate-now">
+                      <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                      <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                      <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                      <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                      <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label" for="input-review">Review:</label>
+                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+                    <!-- <div class="help-block"><span class="text-danger">Note:</span> HTML is not translated!</div> -->
+                  </div>
+                </div>
+                <button _ngcontent-c6="" class="Add_to_Cart button_base" style="height: 40px; width: 100px;">Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <hr class="producthr">
+          <div class="row single-review">
+            <div class="col-lg-3 col-md-4 col-sm-12  col-xs-12">
+              <div class="reviewer">
+                <span id="name">Arlene R.</span>
+                <div class="review-date">
+                  10:54 19 June 19
+                </div>
+              </div>
+
+              <div class="rating_verified_purchase">
+                <div>
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                </div>
+                <p><img src="./../../../assets/image/cache/catalog/storefront/check_icon.png" alt=""><span class="verified_purchase">Verified Purchase</span></p>
               </div>
             </div>
-          </form>
+            <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 comment_body">
+              Maecenas non egestas tellus. Praesent egestas elit a eros molestie bibendum. Etiam aliquam ipsum at luctus pretium. Duis
+              mauris nisl. Maecenas non egestas tellus. Praesent egestas elit a eros molestie bibendum. Etiam aliquam ipsum
+              at luctus pretium. Duis mauris nisl. Maecenas non egestas tellus. Praesent egestas elit a eros molestie bibendum.
+              Etiam aliquam ipsum at luctus pretium. Duis mauris nisl.
+            </div>
+          </div>
+
+          <hr class="producthr">
+          <div class="row single-review">
+            <div class="col-lg-3 col-md-4 col-sm-12  col-xs-12">
+              <div class="reviewer">
+                <span id="name">Arlene R.</span>
+                <div class="review-date">
+                  10:54 19 June 19
+                </div>
+              </div>
+
+              <div class="rating_verified_purchase">
+                <div>
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_small.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                  <img src="./../../../assets/image/cache/catalog/storefront/star_empty_small.png" alt="">
+                </div>
+                <p><img src="./../../../assets/image/cache/catalog/storefront/check_icon.png" alt=""><span class="verified_purchase">Verified Purchase</span></p>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 comment_body">
+              Maecenas non egestas tellus. Praesent egestas elit a eros molestie bibendum. Etiam aliquam ipsum at luctus pretium. Duis
+              mauris nisl. Maecenas non egestas tellus. Praesent egestas elit a eros molestie bibendum. Etiam aliquam ipsum
+              at luctus pretium. Duis mauris nisl. Maecenas non egestas tellus. Praesent egestas elit a eros molestie bibendum.
+              Etiam aliquam ipsum at luctus pretium. Duis mauris nisl.
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!-- relatedproduct -->
 
     <div class="relpro">
-      <h3 class="heading">Customers who bought that also baought these</h3>
+      <h3 class="Customers_Who_Bought_This_Item_Also_Bought left-right-padding">Customers who bought that also bought these</h3>
       <div class=" specialpro pro-nepr row">
         <div id="related" class="owl-carousel owl-theme">
           <div class=" col-xs-12 product-layout">
