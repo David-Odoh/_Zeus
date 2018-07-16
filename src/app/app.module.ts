@@ -37,13 +37,14 @@ import { TransactionTableComponent } from './shop/transaction-history/transactio
 import { OtpModalComponent } from './otp-modal/otp-modal.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { VendorNavbarComponent } from './vendor/vendor-navbar/vendor-navbar.component';
-import { VendorProfileComponent } from './vendor/vendor-profile/vendor-profile.component';
+import { VendorProfileComponent } from './vendor/account-settings/vendor-profile/vendor-profile.component';
 import { Breadcrumb2Component } from './vendor/breadcrumb2/breadcrumb2.component';
-import { MakeSaleComponent } from './vendor/make-sale/make-sale.component';
-import { ChangePasswordComponent } from './vendor/change-password/change-password.component';
-import { ReportIssueComponent } from './vendor/report-issue/report-issue.component';
-import { AddressBookComponent } from './vendor/address-book/address-book.component';
-import { NewSeatComponent } from './vendor/new-seat/new-seat.component';
+import { MakeSaleComponent } from './vendor/account-settings/make-sale/make-sale.component';
+import { ChangePasswordComponent } from './vendor/account-settings/change-password/change-password.component';
+import { ReportIssueComponent } from './vendor/account-settings/report-issue/report-issue.component';
+import { AddressBookComponent } from './vendor/account-settings/address-book/address-book.component';
+import { NewSeatComponent } from './vendor/account-settings/new-seat/new-seat.component';
+import { AccountSettingsComponent } from './vendor/account-settings/account-settings.component';
 
 
 const appRoutes: Routes = [
@@ -87,13 +88,19 @@ const appRoutes: Routes = [
   {
     path: 'vendor', component: VendorComponent,
     children: [
-      { path: '', component: VendorProfileComponent },
-      { path: 'profile', component: VendorProfileComponent },
-      { path: 'make-sale', component: MakeSaleComponent },
-      { path: 'change-password', component: ChangePasswordComponent },
-      { path: 'report-issue', component: ReportIssueComponent },
-      { path: 'address-book', component: AddressBookComponent },
-      { path: 'new-seat', component: NewSeatComponent },
+      { path: '', component: AccountSettingsComponent },
+      {
+        path: 'account-settings', component: AccountSettingsComponent,
+        children: [
+          { path: '', component: VendorProfileComponent },
+          { path: 'profile', component: VendorProfileComponent },
+          { path: 'make-sale', component: MakeSaleComponent },
+          { path: 'change-password', component: ChangePasswordComponent },
+          { path: 'report-issue', component: ReportIssueComponent },
+          { path: 'address-book', component: AddressBookComponent },
+          { path: 'new-seat', component: NewSeatComponent },
+        ]
+      },
     ]
   },
   { path: '**', redirectTo: '/shop', pathMatch: 'full' }
@@ -139,7 +146,8 @@ const appRoutes: Routes = [
     ChangePasswordComponent,
     ReportIssueComponent,
     AddressBookComponent,
-    NewSeatComponent
+    NewSeatComponent,
+    AccountSettingsComponent
   ],
   imports: [
     BrowserModule,
