@@ -38,13 +38,18 @@ import { OtpModalComponent } from './otp-modal/otp-modal.component';
 import { VendorComponent } from './vendor/vendor.component';
 import { VendorNavbarComponent } from './vendor/vendor-navbar/vendor-navbar.component';
 import { VendorProfileComponent } from './vendor/account-settings/vendor-profile/vendor-profile.component';
-import { Breadcrumb2Component } from './vendor/breadcrumb2/breadcrumb2.component';
+import { Breadcrumb2Component } from './vendor/account-settings/breadcrumb2/breadcrumb2.component';
 import { MakeSaleComponent } from './vendor/account-settings/make-sale/make-sale.component';
 import { ChangePasswordComponent } from './vendor/account-settings/change-password/change-password.component';
 import { ReportIssueComponent } from './vendor/account-settings/report-issue/report-issue.component';
 import { AddressBookComponent } from './vendor/account-settings/address-book/address-book.component';
 import { NewSeatComponent } from './vendor/account-settings/new-seat/new-seat.component';
 import { AccountSettingsComponent } from './vendor/account-settings/account-settings.component';
+import { ProductsComponent } from './vendor/products/products.component';
+import { AddComponent } from './vendor/products/add/add.component';
+import { ProductBreadcrumbComponent } from './vendor/products/product-breadcrumb/product-breadcrumb.component';
+import { MyShopComponent } from './vendor/my-shop/my-shop.component';
+import { ShopBreadcrumbComponent } from './vendor/my-shop/shop-breadcrumb/shop-breadcrumb.component';
 
 
 const appRoutes: Routes = [
@@ -101,6 +106,13 @@ const appRoutes: Routes = [
           { path: 'new-seat', component: NewSeatComponent },
         ]
       },
+      {
+        path: 'products', component: ProductsComponent,
+        children: [
+          { path: '', component: AddComponent },
+          { path: 'add', component: AddComponent }
+        ]
+      }
     ]
   },
   { path: '**', redirectTo: '/shop', pathMatch: 'full' }
@@ -147,7 +159,12 @@ const appRoutes: Routes = [
     ReportIssueComponent,
     AddressBookComponent,
     NewSeatComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    ProductsComponent,
+    AddComponent,
+    ProductBreadcrumbComponent,
+    MyShopComponent,
+    ShopBreadcrumbComponent
   ],
   imports: [
     BrowserModule,
