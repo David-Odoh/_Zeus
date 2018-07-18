@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shop/navbar/navbar.component';
@@ -112,7 +115,8 @@ const appRoutes: Routes = [
           { path: '', component: AddComponent },
           { path: 'add', component: AddComponent }
         ]
-      }
+      },
+      { path: 'my-shop', component: MyShopComponent }
     ]
   },
   { path: '**', redirectTo: '/shop', pathMatch: 'full' }
@@ -172,7 +176,10 @@ const appRoutes: Routes = [
     RouterModule,
     FormsModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
