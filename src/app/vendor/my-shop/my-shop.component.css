@@ -125,3 +125,27 @@
     text-transform: uppercase;
     line-height: 1.2;
 }
+
+.pagination {
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    padding: 40px 0;
+}
+
+.number-circle {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-width: 2px;
+    border-color: rgb(255, 189, 103);
+    border-style: solid;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+  }
+
+.current-page {
+    background-color: rgb(255, 189, 103);
+  }

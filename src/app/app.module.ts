@@ -53,6 +53,11 @@ import { AddComponent } from './vendor/products/add/add.component';
 import { ProductBreadcrumbComponent } from './vendor/products/product-breadcrumb/product-breadcrumb.component';
 import { MyShopComponent } from './vendor/my-shop/my-shop.component';
 import { ShopBreadcrumbComponent } from './vendor/my-shop/shop-breadcrumb/shop-breadcrumb.component';
+import { MyTransactionHistoryComponent } from './vendor/my-transaction-history/my-transaction-history.component';
+import { ThBreadcrumbComponent } from './vendor/my-transaction-history/th-breadcrumb/th-breadcrumb.component';
+import { OutstandingComponent } from './vendor/my-transaction-history/outstanding/outstanding.component';
+import { PendingComponent } from './vendor/my-transaction-history/pending/pending.component';
+import { HistoryComponent } from './vendor/my-transaction-history/history/history.component';
 
 
 const appRoutes: Routes = [
@@ -116,7 +121,8 @@ const appRoutes: Routes = [
           { path: 'add', component: AddComponent }
         ]
       },
-      { path: 'my-shop', component: MyShopComponent }
+      { path: 'my-shop', component: MyShopComponent },
+      { path: 'my-transaction-history', component: MyTransactionHistoryComponent },
     ]
   },
   { path: '**', redirectTo: '/shop', pathMatch: 'full' }
@@ -168,7 +174,12 @@ const appRoutes: Routes = [
     AddComponent,
     ProductBreadcrumbComponent,
     MyShopComponent,
-    ShopBreadcrumbComponent
+    ShopBreadcrumbComponent,
+    MyTransactionHistoryComponent,
+    ThBreadcrumbComponent,
+    OutstandingComponent,
+    PendingComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
