@@ -10,8 +10,8 @@
   }
   
   .container{
-    max-width:1920px;
-    max-height: 1800px;
+    max-width:1900px;
+    /* max-height: 1800px; */
     margin-left:auto;
     margin-right:auto;
     padding: .5em;
@@ -101,7 +101,7 @@
     padding-top: 1em;
   }
   
-  .register form p{
+  .register form > p {
     margin:0;
   }
   
@@ -111,12 +111,13 @@
   
   .register form button, .register form input{
     width:100%;
-    padding:1.3em;
+    padding:.8em;
+    line-height: 1.8;
     border-width: 1px;
     border-color: rgb(198, 201, 207) !important;
     border-style: solid;
     border-radius: 8px;
-    margin: 15px 15px 15px 0;
+    margin: 0 15px 30px 0;
   }
   
   .register form button{
@@ -130,6 +131,7 @@
     font-family: "Open Sans";
     color: rgb(255, 255, 255);
     text-transform: uppercase;
+    padding:1.3em;
     line-height: 1.2;
   }
   
@@ -141,13 +143,27 @@
   }
   
   .side_cover_banner {
-      padding: 50px;
-      background-image: url('./../../../assets/image/cache/catalog/kyc/side_cover1-mobile.png');
+    display: grid;
+      padding: 50px 0;
+      background: -moz-linear-gradient(top, rgba(255,82,0, .8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
+      background: -webkit-linear-gradient(top, rgba(255,82,0, .8) 45%, rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
+      background: -o-linear-gradient(top, rgba(255,82,0, .8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
+      background: -ms-linear-gradient(top, rgba(255,82,0, .8) 45%, rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
+      background: linear-gradient(to bottom, rgba(253, 80, 0, 0.8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
       background-size:     cover;                     
       background-repeat:   no-repeat;
       background-position: center center;   
       margin: 0;
-  }
+      justify-content: center;
+      align-content: center; 
+      }
+
+      .side_cover_banner .cooper-logo {
+        font-size: 42px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 1;
+      }
   
   #register_title {
       display: grid;
@@ -239,11 +255,26 @@
       .side_cover_banner h3, .side_cover_banner ul, .brand{
         text-align: left;
       }
+
         .side_cover_banner {
-        background-image: url('./../../../assets/image/cache/catalog/kyc/side_cover1.png');
+          display: grid;
+          background: -moz-linear-gradient(top, rgba(255,82,0, .8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
+          background: -webkit-linear-gradient(top, rgba(255,82,0, .8) 45%, rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
+          background: -o-linear-gradient(top, rgba(255,82,0, .8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
+          background: -ms-linear-gradient(top, rgba(255,82,0, .8) 45%, rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
+          background: linear-gradient(to bottom, rgba(253, 80, 0, 0.8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
         background-size:     cover;                     
         background-repeat:   no-repeat;
-        background-position: center center;     
+        background-position: center center; 
+        justify-content: center;
+        align-content: center; 
+        }
+
+        .side_cover_banner .cooper-logo {
+          font-size: 52px;
+          font-weight: 500;
+          letter-spacing: 0;
+          line-height: 1.2;
         }
         
         .nav {
@@ -345,4 +376,16 @@
             color: #333333 !important;
           }
         
+    }
+
+    .invalid {
+      color: #ff1717;
+      text-align: right;
+      font-size: 13px;
+    }
+
+    .valid {
+      color: #8CBB17;
+      text-align: right;
+      font-size: 13px;
     }

@@ -3,16 +3,38 @@
     <div class="wrapper animated bounceInLeft">
 
       <div class="side_cover_banner">
+        <a href="#">
+                  <span class="cooper-logo"  style="color: #fff;">
+                    C<span style="color:#fe8f01;">OO</span>PER<span style="color:#fe8f01;"> S</span>WI<span style="color:#fe8f01">T</span>CH
+              </span>
+            </a>
       </div>
-
       <div class="login">
         <div id="login_title">Login</div>
         <form>
+          <!-- Validation Message -->
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid animated bounceIn">
+            Invalid.
+          </div>
+          <div *ngIf="email.valid" class="valid animated flash">
+            OK.
+          </div>
+          <!--/End Validation Message -->
           <p>
-            <input type="email" name="name" class="Email_Adress" placeholder="Email Address" autocomplete="new-password">
+            <input type="email" name="email" required [(ngModel)]="userModel.email" class="Email_Adress" placeholder="Email Address"
+              autocomplete="new-password" id="email" #email="ngModel">
           </p>
+          <!-- Validation Message -->
+          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="invalid animated bounceIn">
+            Invalid.
+          </div>
+          <div *ngIf="password.valid" class="valid animated flash">
+            OK.
+          </div>
+          <!--/End Validation Message -->
           <p>
-            <input type="password" name="company" class="Password" placeholder="Password" autocomplete="new-password">
+            <input type="password" name="company" required [(ngModel)]="userModel.password" class="Password" placeholder="Password" autocomplete="new-password"
+              id="password" #password="ngModel">
           </p>
           <p>
             <label class="myCheckbox">
@@ -28,6 +50,11 @@
               Login
             </button>
           </p>
+          <!-- Validation Message -->
+          <div *ngIf="formInvalid" class="valid">
+            Username or Password is not correct
+          </div>
+          <!--/End Validation Message -->
 
           <p class="footer_links">
             <a routerLink="/kyc/forgot-password"><span class="forgot">Forgot password?</span></a>
@@ -35,7 +62,6 @@
           </p>
         </form>
       </div>
-
     </div>
   </div>
 </body>

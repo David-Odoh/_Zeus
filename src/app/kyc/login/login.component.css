@@ -4,7 +4,7 @@
   
   body{
     background:#eeeeee;
-    color:#485e74;
+    color: rgb(51, 51, 51);
     line-height:0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
@@ -14,8 +14,7 @@
     max-height: 1800px;
     margin-left:auto;
     margin-right:auto;
-    background: #eeeeee;
-    color: #485e74;
+    color: rgb(51, 51, 51);
     padding: .5em;
     font-size: 16px;
     letter-spacing: 0px !important;
@@ -45,7 +44,7 @@
   }
   
   .wrapper{
-    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2) !important;
   }
   
   .login > *{
@@ -84,6 +83,10 @@
     border-radius: 8px;
     margin: 15px 15px 15px 0;
   }
+
+  #email, #password {
+    margin: 0 15px 30px 0 !important;
+  }
   
   .login form button {
     border-radius: 10px;
@@ -107,13 +110,27 @@
   }
   
   .side_cover_banner {
-      padding: 50px;
-      background-image: url("./../../../assets/image/cache/catalog/kyc/side_cover1-mobile.png");
+    display: grid;
+      padding: 50px 0;
+      background: -moz-linear-gradient(top, rgba(255,82,0, .8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
+      background: -webkit-linear-gradient(top, rgba(255,82,0, .8) 45%, rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
+      background: -o-linear-gradient(top, rgba(255,82,0, .8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
+      background: -ms-linear-gradient(top, rgba(255,82,0, .8) 45%, rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
+      background: linear-gradient(to bottom, rgba(253, 80, 0, 0.8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover-mobile.png') no-repeat;
       background-size:     cover;                     
       background-repeat:   no-repeat;
       background-position: center center;   
       margin: 0;
-  }
+      justify-content: center;
+      align-content: center; 
+      }
+
+      .side_cover_banner .cooper-logo {
+        font-size: 42px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 1;
+      }
   
   #login_title {
       display: grid;
@@ -160,6 +177,7 @@
   
   .myCheckbox input {
       display: none;
+      vertical-align: middle;
   }
   
   .myCheckbox span {
@@ -167,11 +185,13 @@
       height: 20px;
       display: inline-block;
       background: url("./../../../assets/image/cache/catalog/kyc/check_bg.png") no-repeat scroll;
+      vertical-align: middle;
   }
   
   .myCheckbox input:checked + span {
       display: inline-block;
       background: url("./../../../assets/image/cache/catalog/kyc/check_bg_checked.png") no-repeat scroll;
+      vertical-align: middle;
   }
   
   #remember {
@@ -180,7 +200,8 @@
     color: rgb(51, 51, 51);
     line-height: 1.2;
     text-align: center;
-    margin: 0 0 0 5px;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
   }
   
   
@@ -203,12 +224,26 @@
     .side_cover_banner h3, .side_cover_banner ul, .brand{
       text-align: left;
     }
-      .side_cover_banner {
-      background-image: url('../../../assets/image/cache/catalog/kyc/side_cover1.png');
-      background-size:     cover;                     
-      background-repeat:   no-repeat;
-      background-position: center center;     
-      }
+    .side_cover_banner {
+      display: grid;
+      background: -moz-linear-gradient(top, rgba(255,82,0, .8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
+      background: -webkit-linear-gradient(top, rgba(255,82,0, .8) 45%, rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
+      background: -o-linear-gradient(top, rgba(255,82,0, .8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
+      background: -ms-linear-gradient(top, rgba(255,82,0, .8) 45%, rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
+      background: linear-gradient(to bottom, rgba(253, 80, 0, 0.8) 45%,  rgba(255,8,0, .95) 100%), url('./../../../assets/image/cache/catalog/kyc/side_cover.png') no-repeat;
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    justify-content: center;
+    align-content: center; 
+    }
+
+    .side_cover_banner .cooper-logo {
+      font-size: 52px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
 
   }
   
@@ -235,3 +270,19 @@
   
   }
   
+  .invalid {
+    color: #ff1717;
+    text-align: right;
+    font-size: 13px;
+  }
+
+  .valid {
+    color: #8CBB17;
+    text-align: right;
+    font-size: 13px;
+  }
+
+  #email:focus, #password:focus {
+    border: 1px solid #333333 !important;
+    color: #333333 !important;
+  }
